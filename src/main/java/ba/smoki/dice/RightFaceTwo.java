@@ -5,27 +5,9 @@ import java.awt.*;
 import java.net.URL;
 import java.sql.PreparedStatement;
 
-public class RightFaceTwo extends JLabel {
+public class RightFaceTwo extends DiceFaces {
     public RightFaceTwo() {
         this.setLayout(null);
-        addDiceFace("/face2.png", 0, 0);
-    }
-
-    void addDiceFace(String path, int x, int y) {
-        URL imageUrl = getClass().getResource(path);
-        if (imageUrl != null) {
-            ImageIcon imageIcon = new ImageIcon(imageUrl);
-            int newImageWidth = imageIcon.getIconWidth() / 3;
-            int newImageHeight = imageIcon.getIconHeight() / 3;
-            Image scaledImage = imageIcon.getImage().getScaledInstance(newImageWidth,
-                    newImageHeight,
-                    Image.SCALE_SMOOTH);
-            ImageIcon newImage = new ImageIcon(scaledImage);
-            JLabel imageLabel = new JLabel(newImage);
-            imageLabel.setBounds(x,y,175,175);
-            this.add(imageLabel);
-        } else {
-            System.err.println("Image r2 not found");
-        }
+        addDiceFace("/face2.png", 0, 0, "Image r2 not found");
     }
 }

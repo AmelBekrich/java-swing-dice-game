@@ -4,29 +4,10 @@ import javax.swing.*;
 import java.awt.*;
 import java.net.URL;
 
-public class LeftFaceTwo extends JLabel {
+public class LeftFaceTwo extends DiceFaces {
     public LeftFaceTwo() {
         this.setLayout(null);
-        addDiceFace("/face2.png",0,0);
+        addDiceFace("/face2.png",0,0, "Image l2 not found");
 
-    }
-
-    void addDiceFace(String path, int x, int y) {
-        URL imageUrl = getClass().getResource(path);
-        if (imageUrl != null) {
-            ImageIcon imageIcon = new ImageIcon(imageUrl);
-            int newImageWidth = imageIcon.getIconWidth() / 3;
-            int newImageHeight = imageIcon.getIconHeight() / 3;
-            Image scaledImage = imageIcon.getImage().getScaledInstance(newImageWidth,
-                    newImageHeight,
-                    Image.SCALE_SMOOTH);
-            ImageIcon newImage = new ImageIcon(scaledImage);
-            JLabel imageLabel = new JLabel(newImage);
-            imageLabel.setBounds(x, y, 175, 175);
-
-            this.add(imageLabel);
-        } else {
-            System.err.println("Image l2 not found");
-        }
     }
 }

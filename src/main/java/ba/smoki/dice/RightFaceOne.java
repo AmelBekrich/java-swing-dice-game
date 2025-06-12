@@ -4,29 +4,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.net.URL;
 
-public class RightFaceOne extends JLabel {
+public class RightFaceOne extends DiceFaces {
     public RightFaceOne() {
         this.setLayout(null);
-
-        addDiceFace("/face1.png",0 ,0);
-    }
-
-    void addDiceFace(String path, int x, int y) {
-        URL imageUrl = getClass().getResource(path);
-        if (imageUrl != null) {
-            ImageIcon imageIcon = new ImageIcon(imageUrl);
-            int newImageWidth = imageIcon.getIconWidth() / 3;
-            int newImageHeight = imageIcon.getIconHeight() / 3;
-            Image scaledImage = imageIcon.getImage().getScaledInstance(newImageWidth,
-                    newImageHeight,
-                    Image.SCALE_SMOOTH);
-            ImageIcon newImage = new ImageIcon(scaledImage);
-            JLabel imageLabel = new JLabel(newImage);
-            imageLabel.setBounds(x, y, 175, 175);
-
-            this.add(imageLabel);
-        } else {
-            System.err.println("Image r1 not found");
-        }
+        addDiceFace("/face1.png",0 ,0, "Image r1 not found");
     }
 }

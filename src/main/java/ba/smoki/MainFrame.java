@@ -13,7 +13,6 @@ public class MainFrame extends JFrame {
     void initComponents() {
         this.setResizable(false);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        this.setLocationRelativeTo(null);
         this.setSize(700,400);
     }
 }

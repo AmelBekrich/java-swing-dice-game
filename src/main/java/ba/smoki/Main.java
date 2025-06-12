@@ -15,6 +15,7 @@ public class Main {
     public static void main(String[] args) {
         MainFrame frame = new MainFrame("Dice Game");
         JPanel mainPanel = new JPanel();
+        mainPanel.setBackground(Color.cyan);
         mainPanel.setLayout(null);
 
         JButton rollDiceButton = new JButton("Click to roll the dice");
@@ -56,7 +57,7 @@ public class Main {
         });
 
         mainPanel.add(rollDiceButton);
-
+        frame.setLocationRelativeTo(null);
         frame.setContentPane(mainPanel);
         frame.setVisible(true);
 
