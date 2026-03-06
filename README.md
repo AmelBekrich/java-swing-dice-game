@@ -2,11 +2,11 @@
 
 A simple dice game made in Java using Swing framework.
 
-## FEATURES
+## Features
 
   - Two dice that roll on command and land on random values
 
-## TECHNOLOGIES
+## Technologies
 
   - Java
   - Java Swing
