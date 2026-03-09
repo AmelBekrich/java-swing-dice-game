@@ -15,7 +15,7 @@ public class Main {
     public static void main(String[] args) {
         MainFrame frame = new MainFrame("Dice Game");
         JPanel mainPanel = new JPanel();
-        mainPanel.setBackground(Color.cyan);
+        mainPanel.setBackground(Color.decode("#bdbdbd"));
         mainPanel.setLayout(null);
 
         JButton rollDiceButton = new JButton("Click to roll the dice");
